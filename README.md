@@ -1,6 +1,6 @@
 # 🧩 foobar2000.nvim
 
-🎶 A lightweight Neovim plugin for interacting with the foobar2000 audio player.
+🎶 A minimal Neovim plugin for interacting with the foobar2000 audio player.
 
 ## 📦 Installation
 ```lua
