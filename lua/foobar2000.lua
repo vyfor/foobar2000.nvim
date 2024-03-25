@@ -34,7 +34,7 @@ function foobar2000.setup(userConfig)
 
   local path = config.path
 
-  if path then
+  if userConfig.path then
     local stat = vim.loop.fs_stat(path)
     if not stat or not stat.type == 'file' then
       vim.notify('[foobar2000.nvim] Given path is invalid. Defaulting to "foobar2000.exe"', vim.log.levels.WARN)
