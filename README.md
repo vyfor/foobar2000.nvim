@@ -29,10 +29,11 @@ require('foobar2000').setup({
 - `FoobarRepeatTrack` - Repeats the current track.
 - `FoobarRepeatPlaylist` - Repeats the current playlist.
 - `FoobarRepeatOff` - Disables the repeat mode.
-- `FoobarSeekAhead` - Seeks ahead by 30 seconds.
-- `FoobarSeekBack` - Seeks back by 30 seconds.
+- `FoobarSeekAhead <option>` - Seeks ahead the current track. Available options are: `1s`, `5s`, `10s`, `30s`, `1m`, `5m`, `10m`.
+- `FoobarSeekBack <option>` - Seeks back the current track. Available options are: `1s`, `5s`, `10s`, `30s`, `1m`, `5m`, `10m`.
 - `FoobarVolumeUp` - Increases the volume.
 - `FoobarVolumeDown` - Decreases the volume.
+- `FoobarVolume <option>` - Sets the volume. Available options are: `0`, `-3`, `-6`, `-9`, `-12`, `-15`, `-18`, `-21`
 - `FoobarMute` - Mutes the volume.
 - `FoobarShow` - Shows the main foobar2000 window.
 - `FoobarHide` - Hides the main foobar2000 window.

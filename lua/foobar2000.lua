@@ -6,6 +6,7 @@ local time_units = {
   ['10s'] = '10 seconds',
   ['30s'] = '30 seconds',
   ['1m'] = '1 minute',
+  ['2m'] = '2 minutes',
   ['5m'] = '5 minutes',
   ['10m'] = '10 minutes'
 }
@@ -112,7 +113,7 @@ function foobar2000.setup(userConfig)
     if value then
       os.execute(path .. ' "/command:Ahead by ' .. value .. '"')
     else
-      vim.api.nvim_err_writeln('Invalid value. Use one of: 1s, 5s, 10s 30s, 1m, 5m, 10m')
+      vim.api.nvim_err_writeln('Invalid value. Use one of: 1s, 5s, 10s, 30s, 1m, 2m, 5m, 10m')
     end
   end, { nargs = "?" })
 
@@ -122,7 +123,7 @@ function foobar2000.setup(userConfig)
     if value then
       os.execute(path .. ' "/command:Back by ' .. value .. '"')
     else
-      vim.api.nvim_err_writeln('Invalid value. Use one of: 1s, 5s, 10s 30s, 1m, 5m, 10m')
+      vim.api.nvim_err_writeln('Invalid value. Use one of: 1s, 5s, 10s, 30s, 1m, 2m, 5m, 10m')
     end
   end, { nargs = "?" })
 
