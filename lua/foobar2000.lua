@@ -113,8 +113,10 @@ function foobar2000.setup(userConfig)
     if #args.fargs == 0 then
       value = config.seek_duration
     else
-      value = time_units[args.fargs[1]]
+      value = args.fargs[1]
     end
+
+    value = time_units[value]
 
     if value then
       os.execute(path .. ' "/command:Ahead by ' .. value .. '"')
@@ -129,8 +131,10 @@ function foobar2000.setup(userConfig)
     if #args.fargs == 0 then
       value = config.seek_duration
     else
-      value = time_units[args.fargs[1]]
+      value = args.fargs[1]
     end
+
+    value = time_units[value]
 
     if value then
       os.execute(path .. ' "/command:Back by ' .. value .. '"')
@@ -140,7 +144,7 @@ function foobar2000.setup(userConfig)
   end, { nargs = "?" })
 
   vim.api.nvim_create_user_command('FoobarVolumeUp', function()
-    os.execute(path .. ' \'/command:Volume up\'')
+    os.execute(path .. ' "/command:Volume up"')
   end, {})
 
   vim.api.nvim_create_user_command('FoobarVolumeDown', function()
