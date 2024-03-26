@@ -91,7 +91,7 @@ function foobar2000.setup(userConfig)
     else
       os.execute(path .. ' "/command:Shuffle (' .. value .. ')"')
     end
-    
+
     vim.api.nvim_err_writeln('Invalid option. Use one of: tracks, albums, playlists, off')
   end, { nargs = 1 })
 
@@ -108,7 +108,13 @@ function foobar2000.setup(userConfig)
   end, {})
 
   vim.api.nvim_create_user_command('FoobarSeekAhead', function(args)
-    local value = time_units[args.fargs[1]]
+    local value
+
+    if #args.fargs == 0 then
+      value = config.seek_duration
+    else
+      value = time_units[args.fargs[1]]
+    end
 
     if value then
       os.execute(path .. ' "/command:Ahead by ' .. value .. '"')
@@ -118,7 +124,13 @@ function foobar2000.setup(userConfig)
   end, { nargs = "?" })
 
   vim.api.nvim_create_user_command('FoobarSeekBack', function(args)
-    local value = time_units[args.fargs[1]]
+    local value
+
+    if #args.fargs == 0 then
+      value = config.seek_duration
+    else
+      value = time_units[args.fargs[1]]
+    end
 
     if value then
       os.execute(path .. ' "/command:Back by ' .. value .. '"')
