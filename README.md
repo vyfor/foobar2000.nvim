@@ -5,7 +5,7 @@
 ## 📦 Installation
 ```lua
 {
-  'reblast/foobar2000.nvim',
+  'vyfor/foobar2000.nvim',
 }
 ```
 
