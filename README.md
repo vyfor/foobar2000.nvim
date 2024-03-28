@@ -41,4 +41,4 @@ require('foobar2000').setup({
 - `FoobarCommand <command>` - Sends the specified command to foobar2000. The list of available commands can be found under "Preferences > Keyboard Shortcuts".
 
 ## 🌱 Contributing
-This project is in beta. Feel free to open an issue or pull request for missing features. You can also contact me on Discord **[poxuizm](https://discord.com/users/446729269872427018)** if you have any questions.
+This project is in beta. Feel free to open an issue or pull request for missing features. You can also contact me on Discord **[vyfor](https://discord.com/users/446729269872427018)** if you have any questions.
