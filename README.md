@@ -13,7 +13,7 @@
 ```lua
 require('foobar2000').setup({
   path = 'foobar2000.exe', -- Path to the foobar2000 executable (optional)
-  seek_duration = '30s', -- Seek duration, can be one of: 1s, 5s, 10s, 30s, 1m, 5m, 10m
+  seek_duration = '30s', -- Default seek duration, can be one of: 1s, 5s, 10s, 30s, 1m, 5m, 10m
 })
 ```
 
